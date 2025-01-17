@@ -10,18 +10,24 @@ This project focuses on collaborative optimization for the **Vehicle Routing Pro
 
 ### 1. Metaheuristic Solutions
 
-Three metaheuristic algorithms were implemented to tackle the vehicle routing problem. Below are the key algorithms and their average scores:
+Three metaheuristic algorithms were implemented to tackle the vehicle routing problem. Each approach is detailed below with explanations and achieved average scores:
 
 - **Tabu Search**:
-  - Average Score: **560**
+  - Operates by iteratively exploring neighboring solutions while maintaining a tabu list to prevent revisiting.
+  - Neighbors are generated through random permutations, such as swaps or relocations.
+  - Achieved Average Score: **560**
   ![Cost evolution](graphs/tabu_algo.png)
 
 - **Simulated Annealing**:
-  - Average Score: **590**
+  - Inspired by the metal cooling process, balancing exploration and exploitation through a temperature parameter.
+  - Implements strategies like inter-route swaps, intra-route moves, and merging/splitting routes.
+  - Achieved Average Score: **590**
   ![Cost evolution](graphs/annealing_algo.png)
 
 - **Genetic Algorithm**:
-  - Average Score: **540**
+  - Mimics biological evolution through selection, crossover, and mutation.
+  - Works with an evolving population to refine solutions iteratively.
+  - Achieved Average Score: **540**
   ![Cost evolution](graphs/genetic_algo.png)
 
 **Summary of Metaheuristics**:
@@ -40,10 +46,12 @@ Collaborative optimization was achieved through **Friend** and **Enemy Protocols
     1. Selecting the top-performing half of solutions.
     2. Balancing solution diversity for exploration and exploitation.
   - Each iteration allows agents to incorporate the pool's insights to refine their strategies.
+  - Achieved Average Score: **400**
 
 - **Enemy Protocol**:
   - Introduces competition where agents strive to outperform each other’s solutions.
   - Rival solutions are analyzed, and adversarial dynamics encourage exploration of new search spaces.
+  - Achieved Average Score: **420**
 
 ---
 
